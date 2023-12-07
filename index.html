@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Travis Wiley">
+    <title>Travis Wiley Developer Portfolio</title>
     <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="main.js"></script>
     <meta name="description" content="Travis Wiley Portfolio">
-    <title>Travis Wiley Portfolio</title>
+    
 </head>
 <body>
     <main>
@@ -19,11 +21,33 @@
         </div>  
          
         <section id="about" class="about-me">
-            <h2 class="number-heading"> 
-                <h2>About Me</h2>
-            </h2>
+            <h2 class="number-heading">About Me</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+
+            <div id="purpose-row" class="purpose-row">
+                <h3 class="what-i-do">What I Do</h3>
+                <div class="purpose-column">
+                    <!-- Enter Icon -->
+                    <h4>Responsive Design</h4>
+                    <p>Responsive sites and apps for all screen sizes</p>
+                </div>
+                <div class="purpose-column">
+                    <!-- Enter Icon -->
+                    <h4>Speed</h4>
+                    <p>Quick loading content</p>
+                </div>
+                <div class="purpose-column">
+                    <!-- Enter Icon -->
+                    <h4>User Friendly</h4>
+                    <p>Asthetically pleasing and easy to follow</p>
+                </div>
+                <div class="purpose-column">
+                    <!-- Enter Icon -->
+                    <h4>Dynamic</h4>
+                    <p>Creative and static free content to bring your site alive</p>
+                </div>
+            </div>
             <ul class="skills">
                 <li>HTML</li>
                 <li>CSS</li>
@@ -34,12 +58,12 @@
             <img id="about-img" src="<!-- enter img -->" alt="About Image">
         </section>
 
-        <section id="projects" class="featured-projects">
-            <h2 class="number-heading"> 
+        <section id="featured-projects" class="featured-projects">
+            <h2 class="number-heading">Featured Projects</h2> 
                 <div class="featured1"> 
                     <img id="about-img" src="<!-- enter img -->" alt="Featured Image 1">
-                    <h2>Featured Project 1</h2> <!-- Make this a class -->
-                    <h3>New Project Undecided</h3>
+                    <h3 class="feature">Featured Project 1</h3> <!-- Make this a class -->
+                    <h4>New Project Undecided</h4>
                     <div class="project-description">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
                             <ul class="project-tech-list">
@@ -55,8 +79,8 @@
                 </div>
                 <div class="featured2">
                     <img id="about-img" src="<!-- enter img -->" alt="Featured Image 2">
-                    <h2>Featured Project 2</h2> <!-- Make this a class -->
-                    <h3>eCommerce Site</h3>
+                    <h3 class="feature">Featured Project 2</h3> <!-- Make this a class -->
+                    <h4>eCommerce Site</h4>
                     <div class="project-description">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
                             <ul class="project-tech-list">
@@ -72,8 +96,8 @@
                 </div>
                 <div class="featured3">
                     <img id="about-img" src="<!-- enter img -->" alt="Featured Image 3">
-                    <h2>Featured Project 3</h2> <!-- Make this a class -->
-                    <h3>Redleg Brewing Company Redesign</h3>
+                    <h3 class="feature">Featured Project 3</h3> <!-- Make this a class -->
+                    <h4>Redleg Brewing Company Redesign</h4>
                     <div class="project-description">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
                             <ul class="project-tech-list">
@@ -87,22 +111,97 @@
                             </div>
                     </div>
                 </div>
-            </h2>
         </section>
 
         <section id="other-projects" class="project-archive">
-            <h2 class="number-heading"> 
-                <h2>Other Projects</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.ß</p>
-            </h2>
+            <h2 class="number-heading">Other Projects</h2>
+                <h3 class="other-h3">Other Project 1</h3>
+                <img id="other-img" src="<!-- enter img -->" alt="Other Project 1">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+                    <ul class="project-tech-list">
+                        <li>unknown</li>
+                        <li>unknown</li>
+                        <li>unknown</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">Working Site</a>
+                    </div>
+                <h3 class="other-h3">Other Project 1</h3>
+                <img id="other-img" src="<!-- enter img -->" alt="Other Project 2">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+                    <ul class="project-tech-list">
+                        <li>unknown</li>
+                        <li>unknown</li>
+                        <li>unknown</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">Working Site</a>
+                    </div>
+                <h3 class="other-h3">Other Project 1</h3>
+                <img id="other-img" src="<!-- enter img -->" alt="Other Project 3">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+                    <ul class="project-tech-list">
+                        <li>unknown</li>
+                        <li>unknown</li>
+                        <li>unknown</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">Working Site</a>
+                    </div>
         </section>
 
-        <section id="" class="about-me">
-            <div class="number-heading"> 
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.ß</p>
-            </div>
-        </section>
+        <div class="contactUs" id="contactUs">
+            <h2 class="number-heading">Questions or Collaborate?</h2>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email-contact" name="email" required autocomplete="email">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <legend>Preferred Contact Method:</legend>
+                        <div class="contact-methods">
+                            <div class="form-group">
+                                <input type="radio" id="email-method" name="contact-method" value="email">
+                                <label for="email-method">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="phone-method" name="contact-method" value="phone">
+                                <label for="phone-method">Phone</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" id="sms-method" name="contact-method" value="sms">
+                                <label for="sms-method">SMS</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="error-message" id="contact-method-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="comments">What can we help you with?</label>
+                    <textarea id="comments" name="comments" rows="4" required></textarea>
+                    <div class="error-message" id="comments-error"></div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
     </main>
 
     <footer>

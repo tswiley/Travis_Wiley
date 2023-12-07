@@ -46,3 +46,17 @@ table {
     border-spacing: 0;
 }
 
+/* Global Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mobile First Design */
+header {
+
+}
+
+body {
+    background-color: #8c1d40 ;
+    color: #fff;
+}
