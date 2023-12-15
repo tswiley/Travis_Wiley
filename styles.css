@@ -48,24 +48,16 @@ table {
 
 /* Global Styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Mobile First Design */
-header {
-
-}
-
-body {
-    background-color: #fff;
+    background-color: #11224D;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #black;
+    color: #fff;
+}
+
+main {
+    margin: 10px 10px;
 }
 
 /* Mobile Design */
-
-/* Header */
-
 header {
     background-color: #11224D;
     padding: 20px;
@@ -97,7 +89,7 @@ header {
     padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    order: 1; /* Move the menu toggle to the right */
+    order: 1; 
 }
 
 .bar {
@@ -111,20 +103,20 @@ header {
 .logo img {
     width: 100px;
     height: auto;
-    order: -1; /* Move the logo to the left */
+    order: -1; 
 }
 
 .nav {
-    display: none; /* Hide the navigation links by default on small screens */
+    display: none; 
 }
 
 .nav.open {
-    display: flex; /* Display the navigation links when the menu is open */
+    display: flex; 
     flex-direction: column;
     background-color: #11224D;
     position: absolute;
-    top: 70px; /* Adjust the top position based on your header height */
-    right: 0; /* Position the navigation links on the right for mobile and tablet */
+    top: 70px; 
+    right: 0; 
     width: 100%;
     z-index: 1;
 }
@@ -168,8 +160,32 @@ header {
     opacity: 0;
 }
 
+.hero-container {
+    height: 400px;
+}
+
+.about-me {
+    height: 400px;
+    /* padding-bottom: 20px; */
+}
+
+.featured-projects {
+    height: 400px;
+    padding-bottom: 20px;
+}
+
+.project-archive {
+    height: 400px;
+    padding-top: 50px;
+}
+
+.contactMe {
+    height: 400px;
+    padding-top: 50px;
+}
+
 footer {
-    background-color: blue;
+    
 }
 
 /* Tablet Design */
