@@ -67,20 +67,170 @@ body {
 /* Header */
 
 header {
-    background-color: #75BADA;
+    background-color: #11224D;
     padding: 20px;
+}
+
+.header {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #11224D;
+    color: #FB9850;
+    position: relative;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    order: 1; /* Move the menu toggle to the right */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #F98125;
+    margin: 5px 0;
+    transition: 0.5s opacity var(--animation-curve), 0.5s transform var(--animation-curve);
 }
 
 .logo img {
     width: 100px;
     height: auto;
+    order: -1; /* Move the logo to the left */
 }
 
 .nav {
-    
+    display: none; /* Hide the navigation links by default on small screens */
 }
 
+.nav.open {
+    display: flex; /* Display the navigation links when the menu is open */
+    flex-direction: column;
+    background-color: #11224D;
+    position: absolute;
+    top: 70px; /* Adjust the top position based on your header height */
+    right: 0; /* Position the navigation links on the right for mobile and tablet */
+    width: 100%;
+    z-index: 1;
+}
+
+.nav.open li {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.menu-toggle.open + .nav {
+    display: flex; /* Display the navigation links when the menu is open */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #F98125;
+    font-weight: bold;
+}
+
+.contact {
+    display: none;
+}
+
+#toggle-label {
+    transition: opacity 0.5s var(--animation-curve);
+}
+
+.menu-toggle.open #toggle-label {
+    opacity: 0; /* Hide the label when the menu is open */
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(-3px, -1px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+    transform: rotate(-45deg) translate(-3px, -1px);
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+    opacity: 0;
+}
 
 footer {
     background-color: blue;
+}
+
+/* Tablet Design */
+@media screen and (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button on tablets */
+    }
+
+    .nav {
+        display: flex; /* Display the navigation links on large screens */
+        justify-content: center; /* Center the navigation links horizontally */
+    }
+
+    .nav li {
+        margin-right: 20px;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact a {
+        margin-right: 20px;
+    }
+}
+
+/* Desktop Design */
+@media screen and (min-width: 1024px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button on desktop */
+    }
+
+    .nav {
+        display: flex; /* Display the navigation links on large screens */
+        justify-content: center; /* Center the navigation links horizontally */
+    }
+
+    .nav li {
+        margin-right: 20px;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact a {
+        margin-right: 20px;
+    }
 }
