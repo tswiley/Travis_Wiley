@@ -22,13 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Append the footer content to the body
                     document.body.appendChild(...footerContainer.childNodes);
+                });
+        });
 
-
-            });
-document.addEventListener("DOMContentLoaded", function () {
-            // Contact Form
+    // Contact Form
     $('#contact-form').submit(function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const nameInput = $('#name');
         const phoneInput = $('#phone');
@@ -63,3 +62,4 @@ document.addEventListener("DOMContentLoaded", function () {
             $('#contact-form')[0].reset();
         }
     });
+});

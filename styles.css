@@ -57,6 +57,20 @@ header {
 }
 
 body {
-    background-color: #8c1d40 ;
-    color: #fff;
+    background-color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #black;
+}
+
+/* Mobile Design */
+
+/* Header */
+
+header {
+    background-color: blue;
+}
+
+
+footer {
+    background-color: blue;
 }
