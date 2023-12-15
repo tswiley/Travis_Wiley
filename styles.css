@@ -67,7 +67,17 @@ body {
 /* Header */
 
 header {
-    background-color: blue;
+    background-color: #75BADA;
+    padding: 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav {
+    
 }
 
 
