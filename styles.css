@@ -182,17 +182,17 @@ footer {
     }
 
     .menu-toggle {
-        display: none; /* Hide the menu toggle button on tablets */
+        display: none; 
     }
 
     .nav {
-        display: flex; /* Display the navigation links on large screens */
-        justify-content: center; /* Center the navigation links horizontally */
+        display: flex; 
+        justify-content: center; 
     }
 
     .nav li {
         margin-right: 20px;
-        margin-bottom: 0; /* Remove bottom margin for horizontal layout */
+        margin-bottom: 0; 
     }
 
     .contact {
@@ -245,7 +245,7 @@ footer {
         color: #F98125;
         font-weight: bold;
         font-size: 18px; /* Adjust the font size to your liking */
-        padding: 10px;
+        padding: 25px;
     }
 
     .contact {
@@ -260,12 +260,13 @@ footer {
     }
 
     #resume a[href="contact.html"] {
-        background-color: #F98125;
-        color: #fff;
+        background-color:  #193A6F ;
+        color:  #F98125;
         padding: 10px 20px;
         border: 3px solid #2C599D;
         border-radius: 10px;
         cursor: pointer;
         text-decoration: none;
+        font-weight: bold;
     }
 }
