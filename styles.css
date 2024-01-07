@@ -198,25 +198,29 @@ header {
 }
 
 .hero-container h2 {
-    font-size: 30px;
+    font-size: 35px;
     padding-top: 20px;
 }
 .hero-container p {
-    font-size: 20px;
+    font-size: 25px;
     padding-top: 20px;
 }
 
 .about-me h2 {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .about-me h3 {
     font-size: 25px;
 }
 
+.about-me h4 {
+    font-size: 20px;
+}
+
 .about-me p {
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .about-me h2,
@@ -225,6 +229,22 @@ header {
 .project-archive,
 .contactMe {
     padding-top: 20px;
+}
+
+.what-i-do {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add margin to separate the heading from the grid */
+}
+
+.purpose-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+}
+
+.columns {
+    background-color: #f0f0f0; 
+    padding: 20px;
 }
 
 .skills {
@@ -246,6 +266,21 @@ header {
 }
 
 .skills span {
+    display: block;
+    margin-top: 10px; /* Adjust spacing between icon and label */
+}
+
+.skills li:last-child {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.skills li:last-child img {
+    max-width: 100px; /* Adjust the max-width of the Bootstrap icon */
+}
+
+.skills li:last-child span {
     display: block;
     margin-top: 10px; /* Adjust spacing between icon and label */
 }
