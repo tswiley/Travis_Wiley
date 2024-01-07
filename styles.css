@@ -78,7 +78,7 @@ header {
 .top-bar {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Center items vertically */
+    align-items: center; 
     width: 100%;
 }
 
@@ -127,7 +127,7 @@ header {
 }
 
 .menu-toggle.open + .nav {
-    display: flex; /* Display the navigation links when the menu is open */
+    display: flex; 
 }
 
 .nav a {
@@ -164,9 +164,26 @@ header {
     height: 400px;
 }
 
+.hero-container h1 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero-container h2 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.hero-container p {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
 .about-me {
     height: 400px;
-    /* padding-bottom: 20px; */
 }
 
 .featured-projects {
@@ -189,6 +206,7 @@ footer {
 }
 
 /* Tablet Design */
+/* Tablet Design */
 @media screen and (min-width: 768px) {
     .header {
         flex-direction: row;
@@ -204,11 +222,11 @@ footer {
     .nav {
         display: flex; 
         justify-content: center; 
+        align-items: center; /* Center the navigation links vertically */
     }
 
     .nav li {
-        margin-right: 20px;
-        margin-bottom: 0; 
+        margin-right: 10px; /* Adjust margin for spacing */
     }
 
     .contact {
@@ -220,6 +238,7 @@ footer {
         margin-right: 20px;
     }
 }
+
 
 /* Desktop Design */
 @media screen and (min-width: 1024px) {
@@ -241,7 +260,8 @@ footer {
 
     .nav {
         display: flex;
-        justify-content: center;
+        justify-content: center; /* Center the navigation links horizontally */
+        align-items: center; /* Center the navigation links vertically if needed */
     }
 
     .nav ul {
@@ -260,7 +280,7 @@ footer {
         text-decoration: none;
         color: #F98125;
         font-weight: bold;
-        font-size: 18px; /* Adjust the font size to your liking */
+        font-size: 18px; 
         padding: 25px;
     }
 
@@ -275,7 +295,7 @@ footer {
         list-style: none;
     }
 
-    #resume a[href="contact.html"] {
+    #resume a[href="Travis_Wiley_2023.pdf"] {
         background-color:  #193A6F ;
         color:  #F98125;
         padding: 10px 20px;
