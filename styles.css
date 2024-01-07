@@ -201,11 +201,17 @@ header {
     font-size: 30px;
     padding-top: 20px;
 }
-
-.hero-container p,
-.about-me p {
+.hero-container p {
     font-size: 20px;
     padding-top: 20px;
+}
+
+.about-me h2 {
+    font-size: 30px;
+}
+
+.about-me h3 {
+    font-size: 25px;
 }
 
 .about-me h2,
