@@ -238,7 +238,6 @@ header {
     height: 100px;
 }
 
-
 .what-i-do {
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Add margin to separate the heading from the grid */
@@ -299,6 +298,10 @@ header {
     margin-top: 10px; /* Adjust spacing between icon and label */
 }
 
+#swiper-wrapper img {
+    max-width: 100px;
+    height: 100px;
+}
 .featured-projects {
     display: flex;
     flex-direction: column;
@@ -481,40 +484,5 @@ button {
         max-width: 600px;
         margin: 0 auto;
     }
-
-    .featured-projects {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .swiper-container {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .swiper-slide {
-        width: 100%;
-    }
-
-    .project-card {
-        width: 100%;
-        box-sizing: border-box;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    #rotate-carousel {
-        display: none; /* Hide the rotate button on desktop and tablet */
-    }
-
-    #rotate-carousel:hover {
-        cursor: pointer;
-    }
-
-    /* Add this rule if you want to scale on hover */
-    .project-card:hover {
-        transform: scale(1.1);
-    }
-
-    
 }
 
