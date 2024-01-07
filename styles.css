@@ -214,6 +214,11 @@ header {
     font-size: 25px;
 }
 
+.about-me p {
+    padding-top: 20px;
+    font-size: 20px;
+}
+
 .about-me h2,
 #purpose-row,
 .featured-projects,
@@ -222,10 +227,27 @@ header {
     padding-top: 20px;
 }
 
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0; /* Remove default padding on the ul */
+    list-style: none;
+}
+
+.skills li {
+    flex-basis: calc(50% - 10px); /* Adjust width to create two columns with some spacing */
+    margin-bottom: 20px; /* Adjust spacing between rows */
+    text-align: center;
+}
+
 .skills img {
-    width: 100px;
-    height: auto;
-    padding: 10px;
+    max-width: 100px; /* Adjust the max-width of the icons */
+}
+
+.skills span {
+    display: block;
+    margin-top: 10px; /* Adjust spacing between icon and label */
 }
 
 .contactMe {
