@@ -1,31 +1,38 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch and include the header content
     fetch("header.html")
         .then(response => response.text())
         .then(headerData => {
-            // Create a temporary container to hold the header content
             const headerContainer = document.createElement("div");
             headerContainer.innerHTML = headerData;
-
-            // Append the header content to the body
             document.body.prepend(...headerContainer.childNodes);
 
-            // Fetch and include the footer content after fetching the header
             fetch("footer.html")
                 .then(response => response.text())
                 .then(footerData => {
-                    // Create a temporary container to hold the footer content
                     const footerContainer = document.createElement("div");
                     footerContainer.innerHTML = footerData;
-
-                    // Append the footer content to the body
                     document.body.appendChild(...footerContainer.childNodes);
+
+                    // Hamburger menu toggle code
+                    const menuToggle = document.querySelector('.menu-toggle');
+                    const nav = document.querySelector('.nav');
+                    const closeButton = document.querySelector('.close-button');
+
+                    menuToggle.addEventListener('click', function () {
+                        nav.classList.toggle('open');
+                        menuToggle.classList.toggle('open');
+                    });
+
+                    closeButton.addEventListener('click', function () {
+                        nav.classList.remove('open');
+                        menuToggle.classList.remove('open');
+                    });
+
                 });
         });
 
-    // Contact Form
     $('#contact-form').submit(function (event) {
         event.preventDefault();
 
@@ -40,26 +47,36 @@ document.addEventListener("DOMContentLoaded", function () {
         const contactMethodError = $('#contact-method-error');
         const commentsError = $('#comments-error');
 
-        // Validate inputs
         const isValidName = validateNotEmpty(nameInput.val());
         const isValidPhone = validateNotEmpty(phoneInput.val());
         const isValidEmail = validateEmail(emailInput.val());
         const isValidContactMethod = contactMethodInput.length > 0;
         const isValidComments = validateNotEmpty(commentsInput.val());
 
-        // Display error messages
         displayErrorMessage(isValidName, nameError, 'Please enter your name.');
         displayErrorMessage(isValidPhone, phoneError, 'Please enter your phone number.');
         displayErrorMessage(isValidEmail, emailError, 'Please enter a valid email address.');
         displayErrorMessage(isValidContactMethod, contactMethodError, 'Please select a contact method.');
         displayErrorMessage(isValidComments, commentsError, 'Please enter your comments.');
 
-        // Check if all inputs are valid
         if (isValidName && isValidPhone && isValidEmail && isValidContactMethod && isValidComments) {
-            // Handle successful submission (you can replace this with your own logic)
             alert('Thank you for contacting us. We will reach out to you soon.');
-            // Clear the form
             $('#contact-form')[0].reset();
         }
+    });
+
+    var backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    backToTopButton.addEventListener('click', function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     });
 });

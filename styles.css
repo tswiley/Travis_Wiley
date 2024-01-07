@@ -87,7 +87,6 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
     order: 1; 
@@ -108,33 +107,28 @@ header {
 }
 
 .nav {
-    display: none; 
+    display: none;
 }
 
 .nav.open {
-    display: flex; 
-    flex-direction: column;
+    display: block;
     background-color: #11224D;
     position: absolute;
-    top: 70px; 
-    right: 0; 
-    width: 100%;
-    z-index: 1;
+    top: 100px;
+    right: 0;
+    width: 150px;
 }
 
-.nav.open li {
-    margin-right: 0;
+.nav li {
     margin-bottom: 10px;
-}
-
-.menu-toggle.open + .nav {
-    display: flex; 
 }
 
 .nav a {
     text-decoration: none;
     color: #F98125;
     font-weight: bold;
+    padding: 15px;
+    display: block;
 }
 
 .contact {
@@ -159,6 +153,23 @@ header {
 
 .menu-toggle.open .bar:nth-child(3) {
     opacity: 0;
+}
+
+#resume {
+    position: absolute;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+#resume a[href="Travis_Wiley_2023.pdf"] {
+    background-color: #193A6F;
+    color: #F98125;
+    padding: 10px 20px;
+    border: 3px solid #2C599D;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #bio-image {
@@ -189,6 +200,7 @@ header {
 }
 
 .hero-container h2 {
+    padding-top: 30px;
     font-size: 50px;
 }
 
@@ -404,6 +416,31 @@ button {
     margin-right: 5px; /* Adjust the spacing between radio buttons and labels */
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F98125;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#back-to-top a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+#back-to-top:hover {
+    background-color: #F98125;
+    opacity: 0.8;
+}
+
+
 footer {
     background-color: #11224D;
     color: #fff;
@@ -481,14 +518,14 @@ footer a {
     }
 
     #resume {
-        margin-left: auto;
-        margin-right: 30px;
+        right: 0;
+        padding-right: 20px;
+        padding-top: 0;
     }
 
     #resume a[href="Travis_Wiley_2023.pdf"] {
-        background-color:  #193A6F ;
-        color:  #F98125;
-        padding: 10px 20px;
+        background-color: #193A6F;
+        color: #F98125;
         border: 3px solid #2C599D;
         border-radius: 10px;
         cursor: pointer;
