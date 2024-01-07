@@ -480,6 +480,16 @@ button {
         font-weight: bold;
     }
 
+    .purpose-columns {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .skills {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
     .contactMe {
         max-width: 600px;
         margin: 0 auto;
