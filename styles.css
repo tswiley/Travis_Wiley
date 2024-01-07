@@ -222,7 +222,12 @@ header {
     padding-top: 20px;
 }
 
-/* Mobile Design */
+.skills img {
+    width: 100px;
+    height: auto;
+    padding: 10px;
+}
+
 .contactMe {
     background-color: #11224D;
     color: #fff;
