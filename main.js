@@ -62,16 +62,4 @@ document.addEventListener("DOMContentLoaded", function () {
             $('#contact-form')[0].reset();
         }
     });
-
-    // Initialize Swiper for the project carousel
-    // const swiper = new Swiper('.swiper-container', {
-    //     direction: 'horizontal', // Set the direction to horizontal
-    //     loop: true, // Enable loop mode for continuous sliding
-    //     slidesPerView: 1, // Number of slides per view
-    //     spaceBetween: 20, // Space between slides
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    // });
 });
