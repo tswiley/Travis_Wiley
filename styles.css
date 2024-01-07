@@ -167,6 +167,7 @@ header {
     border: 5px solid #F98125;
     margin: 0 auto;
     display: block;
+    margin-top: 120px;
 }
 
 .hero-container h1,
@@ -176,7 +177,7 @@ header {
 .about-me p,
 #purpose-row,
 .featured-projects,
-.project-archive,
+.other-projects,
 .contactMe {
     text-align: center;
 }
@@ -188,31 +189,50 @@ header {
 }
 
 .hero-container h2 {
+    font-size: 50px;
+}
+
+.about-me h2,
+.featured-projects h2,
+.other-projects h2 {
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+.featured-projects h2,
+.other-projects h2 {
+    padding-bottom: 30px;
+}
+
+.hero-container h3 {
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+.about-me h3,
+.featured-projects h3,
+.other-projects h3 {
     font-size: 35px;
     padding-top: 50px;
 }
+
+.about-me h4,
+.featured-projects h4,
+.other-projects h4 {
+    font-size: 25px;
+    padding-top: 50px;
+}
+
 .hero-container p {
     font-size: 25px;
     padding-top: 30px;
-    margin-bottom: 50px;
 }
 
-.about-me h2 {
-    margin-top: 120px;
-    font-size: 35px;
-}
-
-.about-me h3 {
-    font-size: 25px;
-}
-
-.about-me h4 {
-    font-size: 20px;
-}
-
-.about-me p {
-    padding-top: 20px;
+.about-me p,
+.featured-projects p,
+.other-projects p {
     font-size: 15px;
+    padding-top: 30px;
 }
 
 #purpose-row .columns img {
@@ -258,7 +278,8 @@ header {
 }
 
 .skills img {
-    max-width: 100px; 
+    max-width: 100px;
+    width: 100px; 
 }
 
 .skills span {
@@ -273,18 +294,10 @@ header {
 }
 
 .skills li:last-child img {
-    max-width: 100px; /* Adjust the max-width of the Bootstrap icon */
-}
-
-.skills li:last-child span {
-    display: block;
-    margin-top: 10px; /* Adjust spacing between icon and label */
-}
-
-#swiper-wrapper img {
     max-width: 100px;
-    height: 100px;
+    max-height: 100px;
 }
+
 .featured-projects {
     display: flex;
     flex-direction: column;
@@ -391,6 +404,24 @@ button {
     margin-right: 5px; /* Adjust the spacing between radio buttons and labels */
 }
 
+footer {
+    background-color: #11224D;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    padding-top: 20px;
+    color: #F98125;
+    text-decoration: none;
+}
+
 /* Desktop and Tablet Design */
 @media screen and (min-width: 1045px) {
     .menu-toggle {
@@ -451,6 +482,7 @@ button {
 
     #resume {
         margin-left: auto;
+        margin-right: 30px;
     }
 
     #resume a[href="Travis_Wiley_2023.pdf"] {
@@ -465,14 +497,14 @@ button {
     }
 
     .purpose-columns {
-        max-width: 1024px;
+        max-width: 1100px;
         margin: 0 auto;
         display: flex; /* Change display to flex */
         justify-content: space-evenly; /* Add this line to evenly space columns horizontally */
     }
 
     .skills {
-        max-width: 1024px;
+        max-width: 1100px;
         margin: 0 auto;
         display: flex; /* Add this line */
         justify-content: space-evenly; /* Add this line to evenly space skills horizontally */
@@ -492,10 +524,7 @@ button {
         margin-bottom: 20px;
         text-align: center;
     }
-    
-    .skills img {
-        max-width: 100px;
-    }
+
     
     .contactMe {
         max-width: 600px;
