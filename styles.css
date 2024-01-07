@@ -50,7 +50,7 @@ table {
 body {
     background-color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #11224D;
+    color: #828282;
     line-height: 1;
 }
 
@@ -193,17 +193,19 @@ header {
 }
 
 .hero-container h1 {
-    font-size: 50px;
+    font-size: 100px;
     padding-top: 20px;
+    margin-top: 50px;
 }
 
 .hero-container h2 {
     font-size: 35px;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 .hero-container p {
     font-size: 25px;
-    padding-top: 20px;
+    padding-top: 50px;
+    margin-bottom: 50px;
 }
 
 .about-me h2 {
@@ -231,6 +233,12 @@ header {
     padding-top: 20px;
 }
 
+#purpose-row .columns img {
+    width: 100px;
+    height: 100px;
+}
+
+
 .what-i-do {
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Add margin to separate the heading from the grid */
@@ -250,23 +258,30 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0; /* Remove default padding on the ul */
+    padding: 0; 
     list-style: none;
+    text-align: center; 
+}
+
+.skills h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .skills li {
-    flex-basis: calc(50% - 10px); /* Adjust width to create two columns with some spacing */
-    margin-bottom: 20px; /* Adjust spacing between rows */
+    flex-basis: calc(50% - 10px); 
+    margin-bottom: 20px; 
     text-align: center;
 }
 
 .skills img {
-    max-width: 100px; /* Adjust the max-width of the icons */
+    max-width: 100px; 
 }
 
 .skills span {
     display: block;
-    margin-top: 10px; /* Adjust spacing between icon and label */
+    margin-top: 10px; 
 }
 
 .skills li:last-child {
@@ -282,6 +297,46 @@ header {
 .skills li:last-child span {
     display: block;
     margin-top: 10px; /* Adjust spacing between icon and label */
+}
+
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-card h3,
+.project-card h4 {
+    margin-top: 10px;
+}
+
+.project-description {
+    margin-top: 15px;
+}
+
+.project-tech-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.project-tech-list li {
+    margin-bottom: 5px;
+}
+
+.project-links {
+    margin-top: 15px;
 }
 
 .contactMe {
@@ -426,5 +481,40 @@ button {
         max-width: 600px;
         margin: 0 auto;
     }
+
+    .featured-projects {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .swiper-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .project-card {
+        width: 100%;
+        box-sizing: border-box;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #rotate-carousel {
+        display: none; /* Hide the rotate button on desktop and tablet */
+    }
+
+    #rotate-carousel:hover {
+        cursor: pointer;
+    }
+
+    /* Add this rule if you want to scale on hover */
+    .project-card:hover {
+        transform: scale(1.1);
+    }
+
+    
 }
 

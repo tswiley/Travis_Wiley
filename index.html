@@ -7,24 +7,24 @@
     <meta name="author" content="Travis Wiley">
     <title>Travis Wiley Developer Portfolio</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="main.js"></script>
     <meta name="description" content="Travis Wiley Portfolio">
-    
 </head>
 <body>
     <main>
         <div class="hero-container">
-            <img id="bio-image" src="Project Images/tw.jpeg" alt="Travis Wiley">
             <h1>Travis Wiley</h1>
             <h2>Full-Stack Developer</h2>
             <p>A Full-Stack Developer focused on building functional websites and applications.</p>
+            <img id="bio-image" src="Project Images/tw.jpeg" alt="Travis Wiley">
         </div>  
          
         <section id="about" class="about-me">
             <h2 class="number-heading">About Me</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+            <p>As a full-stack web developer, I specialize in creating dynamic and responsive websites, ensuring optimal user experiences. </p>
+            <p>My expertise lies in crafting efficient and visually appealing solutions across the entire web development spectrum.</p>
 
             <div id="purpose-row" class="purpose-row">
                 <h3 class="what-i-do">What I Do</h3>
@@ -53,6 +53,7 @@
             </div>
             
             <ul class="skills">
+                <h3>Languages & Dev Tools</h3>
                 <li>
                     <img src="Icons/htmlicon.png" alt="HTML icon">
                     <span>HTML</span>
@@ -78,13 +79,15 @@
         </section>
 
         <section id="featured-projects" class="featured-projects">
-            <h2 class="number-heading">Featured Projects</h2> 
-                <div class="featured1"> 
-                    <img id="about-img" src="<!-- enter img -->" alt="Featured Image 1">
-                    <h3 class="feature">Featured Project 1</h3> <!-- Make this a class -->
-                    <h4>New Project Undecided</h4>
-                    <div class="project-description">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+            <h2 class="number-heading">Featured Projects</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide project-card featured1">
+                        <img src="<!-- enter img -->" alt="Featured Image 1">
+                        <h3 class="feature">Featured Project 1</h3>
+                        <h4>New Project Undecided</h4>
+                        <div class="project-description">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
                             <ul class="project-tech-list">
                                 <li>unknown</li>
                                 <li>unknown</li>
@@ -94,14 +97,14 @@
                                 <a href="#">GitHub</a>
                                 <a href="#">Working Site</a>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="featured2">
-                    <img id="about-img" src="<!-- enter img -->" alt="Featured Image 2">
-                    <h3 class="feature">Featured Project 2</h3> <!-- Make this a class -->
-                    <h4>eCommerce Site</h4>
-                    <div class="project-description">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+                    <div class="swiper-slide project-card featured2">
+                        <img src="<!-- enter img -->" alt="Featured Image 2">
+                        <h3 class="feature">Featured Project 2</h3>
+                        <h4>eCommerce Site</h4>
+                        <div class="project-description">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
                             <ul class="project-tech-list">
                                 <li>unknown</li>
                                 <li>unknown</li>
@@ -111,14 +114,14 @@
                                 <a href="#">GitHub</a>
                                 <a href="#">Working Site</a>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="featured3">
-                    <img id="about-img" src="<!-- enter img -->" alt="Featured Image 3">
-                    <h3 class="feature">Featured Project 3</h3> <!-- Make this a class -->
-                    <h4>Redleg Brewing Company Redesign</h4>
-                    <div class="project-description">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+                    <div class="swiper-slide project-card featured3">
+                        <img src="<!-- enter img -->" alt="Featured Image 3">
+                        <h3 class="feature">Featured Project 3</h3>
+                        <h4>Redleg Brewing Company Redesign</h4>
+                        <div class="project-description">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
                             <ul class="project-tech-list">
                                 <li>unknown</li>
                                 <li>unknown</li>
@@ -128,50 +131,61 @@
                                 <a href="#">GitHub</a>
                                 <a href="#">Working Site</a>
                             </div>
+                        </div>
                     </div>
                 </div>
-                <hr>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <hr>
         </section>
 
         <section id="other-projects" class="project-archive">
             <h2 class="number-heading">Other Projects</h2>
+            <div class="project-card">
                 <h3 class="other-h3">Other Project 1</h3>
                 <img id="other-img" src="<!-- enter img -->" alt="Other Project 1">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
-                    <ul class="project-tech-list">
-                        <li>unknown</li>
-                        <li>unknown</li>
-                        <li>unknown</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="#">GitHub</a>
-                        <a href="#">Working Site</a>
-                    </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+                <ul class="project-tech-list">
+                    <li>unknown</li>
+                    <li>unknown</li>
+                    <li>unknown</li>
+                </ul>
+                <div class="project-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">Working Site</a>
+                </div>
+            </div>
+            <div class="project-card">
                 <h3 class="other-h3">Other Project 2</h3>
                 <img id="other-img" src="<!-- enter img -->" alt="Other Project 2">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
-                    <ul class="project-tech-list">
-                        <li>unknown</li>
-                        <li>unknown</li>
-                        <li>unknown</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="#">GitHub</a>
-                        <a href="#">Working Site</a>
-                    </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+                <ul class="project-tech-list">
+                    <li>unknown</li>
+                    <li>unknown</li>
+                    <li>unknown</li>
+                </ul>
+                <div class="project-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">Working Site</a>
+                </div>
+            </div>
+            <div class="project-card">
                 <h3 class="other-h3">Other Project 3</h3>
                 <img id="other-img" src="<!-- enter img -->" alt="Other Project 3">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
-                    <ul class="project-tech-list">
-                        <li>unknown</li>
-                        <li>unknown</li>
-                        <li>unknown</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="#">GitHub</a>
-                        <a href="#">Working Site</a>
-                    </div>
-                    <hr>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum vitae amet reprehenderit id ratione, voluptatibus voluptatem dolor hic corporis labore.</p>
+                <ul class="project-tech-list">
+                    <li>unknown</li>
+                    <li>unknown</li>
+                    <li>unknown</li>
+                </ul>
+                <div class="project-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">Working Site</a>
+                </div>
+            </div>
+            <hr>
         </section>
 
         <div class="contactMe" id="contactMe">
@@ -224,5 +238,7 @@
             </form>
         </div>
     </main>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
