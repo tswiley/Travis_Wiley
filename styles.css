@@ -259,7 +259,6 @@ textarea {
     width: 100%;
 }
 
-/* Additional styles for form elements */
 input,
 textarea,
 button {
@@ -280,10 +279,6 @@ button {
 .contact-methods input[type="radio"] {
     margin-right: 5px; /* Adjust the spacing between radio buttons and labels */
 }
-
-
-
-
 
 /* Desktop and Tablet Design */
 @media screen and (min-width: 1045px) {
@@ -356,6 +351,11 @@ button {
         cursor: pointer;
         text-decoration: none;
         font-weight: bold;
+    }
+
+    .contactMe {
+        width: 400px;
+        margin: 0 auto;
     }
 }
 
