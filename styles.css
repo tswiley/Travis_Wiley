@@ -216,67 +216,36 @@ header {
     padding-top: 20px;
 }
 
-/* Tablet Design */
-@media screen and (min-width: 768px) {
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: none; 
-    }
-
-    .nav {
-        display: flex; 
-        justify-content: center; 
-        align-items: center; /* Center the navigation links vertically */
-    }
-
-    .nav li {
-        margin-right: 10px; /* Adjust margin for spacing */
-    }
-
-    .contact {
-        display: flex;
-        align-items: center;
-    }
-
-    .contact a {
-        margin-right: 20px;
-    }
-}
-
-/* Desktop Design */
-@media screen and (min-width: 1024px) {
+/* Desktop and Tablet Design */
+@media screen and (min-width: 1045px) {
     .menu-toggle {
         display: none;
     }
 
     .header {
-        color: red;
         display: grid;
-        grid-template-columns: 250px 1fr 125px;
+        grid-template-columns: auto 1fr auto; /* Three columns: logo, nav, contact and resume button */
+        align-items: center;
+        padding: 10px;
     }
-
-    .logo img {
-        height: 100px;
-        width: auto;
-        padding: 0;
+    
+    #logo img {
+        width: 100px;
+        height: auto;
     }
 
     .nav {
-        display: flex;
-        justify-content: center; /* Center the navigation links horizontally */
-        align-items: center; /* Center the navigation links vertically if needed */
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav ul {
         list-style: none;
         display: flex;
         justify-content: center;
+        align-items: center;
         margin: 0;
         padding: 15px 0;
     }
@@ -294,14 +263,19 @@ header {
     }
 
     .contact {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: end;
         align-items: center;
-        padding-top: 20px;
-        width: auto;
     }
 
     .contact ul {
         list-style: none;
+        margin-right: 10px;
+    }
+
+    #resume {
+        margin-left: auto; /* Move the resume button to the right */
     }
 
     #resume a[href="Travis_Wiley_2023.pdf"] {
@@ -315,3 +289,4 @@ header {
         font-weight: bold;
     }
 }
+
