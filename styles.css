@@ -216,6 +216,75 @@ header {
     padding-top: 20px;
 }
 
+/* Mobile Design */
+.contactMe {
+    background-color: #11224D;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.contactMe form {
+    width: 100%; /* Set the form width as needed */
+    max-width: 400px; /* Adjust the max-width based on your design */
+}
+
+.contactMe h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #F98125;
+}
+
+.form-group {
+    padding: 10px;
+}
+
+.comment-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; 
+}
+
+label {
+    order: -1; 
+    padding-bottom: 5px;
+}
+
+textarea {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Additional styles for form elements */
+input,
+textarea,
+button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-methods .form-group {
+    margin-right: 20px; /* Adjust the spacing between radio buttons and labels */
+}
+
+.contact-methods input[type="radio"] {
+    margin-right: 5px; /* Adjust the spacing between radio buttons and labels */
+}
+
+
+
+
+
 /* Desktop and Tablet Design */
 @media screen and (min-width: 1045px) {
     .menu-toggle {
@@ -224,7 +293,7 @@ header {
 
     .header {
         display: grid;
-        grid-template-columns: auto 1fr auto; /* Three columns: logo, nav, contact and resume button */
+        grid-template-columns: auto 1fr auto; 
         align-items: center;
         padding: 10px;
     }
@@ -275,7 +344,7 @@ header {
     }
 
     #resume {
-        margin-left: auto; /* Move the resume button to the right */
+        margin-left: auto;
     }
 
     #resume a[href="Travis_Wiley_2023.pdf"] {
