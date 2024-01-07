@@ -48,9 +48,10 @@ table {
 
 /* Global Styles */
 body {
-    background-color: #11224D;
+    background-color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
+    color: #11224D;
+    line-height: 1;
 }
 
 main {
@@ -160,52 +161,61 @@ header {
     opacity: 0;
 }
 
-.hero-container {
-    height: 400px;
+.hero-container,
+.about-me,
+#purpose-row,
+.featured-projects,
+.project-archive,
+.contactMe {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#bio-image {
+    max-height: 300px;
+    border-radius: 50%;
+    border: 5px solid #F98125;
+    margin: 0 auto;
+    display: block;
+}
+
+.hero-container h1,
+.hero-container h2,
+.hero-container p,
+.about-me h2,
+.about-me p,
+#purpose-row,
+.featured-projects,
+.project-archive,
+.contactMe {
+    text-align: center;
 }
 
 .hero-container h1 {
     font-size: 50px;
-    text-align: center;
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 .hero-container h2 {
     font-size: 30px;
-    text-align: center;
     padding-top: 20px;
 }
 
-.hero-container p {
+.hero-container p,
+.about-me p {
     font-size: 20px;
-    text-align: center;
     padding-top: 20px;
 }
 
-.about-me {
-    height: 400px;
-}
-
-.featured-projects {
-    height: 400px;
-    padding-bottom: 20px;
-}
-
-.project-archive {
-    height: 400px;
-    padding-top: 50px;
-}
-
+.about-me h2,
+#purpose-row,
+.featured-projects,
+.project-archive,
 .contactMe {
-    height: 400px;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
-footer {
-    
-}
-
-/* Tablet Design */
 /* Tablet Design */
 @media screen and (min-width: 768px) {
     .header {
@@ -238,7 +248,6 @@ footer {
         margin-right: 20px;
     }
 }
-
 
 /* Desktop Design */
 @media screen and (min-width: 1024px) {
