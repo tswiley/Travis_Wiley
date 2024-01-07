@@ -226,11 +226,13 @@ header {
     align-items: center;
     padding: 20px;
     border-radius: 15px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contactMe form {
-    width: 100%; /* Set the form width as needed */
-    max-width: 400px; /* Adjust the max-width based on your design */
+    width: 100%; 
+    max-width: 400px; 
 }
 
 .contactMe h2 {
@@ -354,7 +356,7 @@ button {
     }
 
     .contactMe {
-        width: 400px;
+        max-width: 600px;
         margin: 0 auto;
     }
 }
