@@ -221,16 +221,12 @@ header {
     padding-top: 50px;
 }
 
-.about-me h3,
-.featured-projects h3,
-.other-projects h3 {
+.about-me h3 {
     font-size: 35px;
     padding-top: 50px;
 }
 
-.about-me h4,
-.featured-projects h4,
-.other-projects h4 {
+.about-me h4 {
     font-size: 25px;
     padding-top: 50px;
 }
@@ -317,6 +313,8 @@ header {
 }
 
 .project-card {
+    max-width: 300px;
+    max-height: 400px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -330,11 +328,11 @@ header {
 
 .project-card h3,
 .project-card h4 {
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .project-description {
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .project-tech-list {
