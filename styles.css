@@ -588,6 +588,14 @@ footer a {
         transform: scale(1.1); /* Add a scale effect on hover */
     }
     
+
+    #project-card-1 {
+        background-color: #193A6F;
+    }
+
+    #project-card-3 {
+        background-color: #F98125;
+    }
     #project-card-1,
     #project-card-3,
     #other-cards-1,

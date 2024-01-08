@@ -46,10 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         updateProjectContainer() {
+            console.log('Updating project container...');
             this.carouselArray.forEach(el => {
-                el.classList.remove('project-card-1');
-                el.classList.remove('project-card-2');
-                el.classList.remove('project-card-3');
+                el.classList.remove('project-card');
+                el.classList.remove('project-card');
+                el.classList.remove('project-card');
             });
 
             this.carouselArray.slice(0, 2).forEach((el, i) => {
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         setCurrentState(direction) {
+            console.log('Setting current state...');
             if (direction.className == 'card-controls-previous') {
                 this.carouselArray.unshift(this.carouselArray.pop());
             } else {
@@ -67,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         setControls() {
+            console.log('Setting controls....');
             this.carouselControls.forEach(control => {
                 cardControlsContainer.appendChild(document.createElement('button')).className = `card-controls-${control}`;
                 document.querySelector(`.card-controls-${control}`).innerText = control;
@@ -74,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         useControls() {
+            console.log('Using controls....');
             const triggers = [...cardControlsContainer.childNodes];
             triggers.forEach(control => {
                 control.addEventListener('click', e => {
