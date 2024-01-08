@@ -420,6 +420,13 @@ button {
     margin-right: 5px; /* Adjust the spacing between radio buttons and labels */
 }
 
+.success-message {
+    color: #4CAF50; /* Green color */
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
 #back-to-top {
     position: fixed;
     bottom: 20px;
@@ -588,7 +595,6 @@ footer a {
         transform: scale(1.1); /* Add a scale effect on hover */
     }
     
-
     #project-card-1 {
         background-color: #193A6F;
     }
