@@ -33,6 +33,64 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
         });
 
+        const cardContainer = document.querySelector('.card-container');
+        const cardControlsContainer = documen.querySelector('.card-controls');
+        const cardControls = ['previous', 'next'];
+        const projectCard = document.querySelectorAll('.project-card');
+        const otherCards = document.querySelectorAll('.other-cards');
+
+        class Carousel {
+            constructor(container, cards, controls) {
+                this.carouselContainer = container;
+                this.carouselControls = controls;
+                this.carouselArray = [...cards];
+            }
+
+            updateProjectContainer() {
+                this.carouselArray.forEach(el => {
+                    el.classList.remove('project-card-1');
+                    el.classList.remove('project-card-2');
+                    el.classList.remove('project-card-3');
+                });
+
+                this.carouselArray.slice(0,3).forEach((el, i) => {
+                    el.classList.add(`project-card-${i + 1}`); 
+                });
+            }
+
+            setCurrentState(direction) {
+                if (direction.className == 'card-controls-previous') {
+                    this.carouselArray.unshift(this.carouselArray.pop());
+                } else {
+                    this.carouselArray.push(this.carouselArray.shift());
+                }
+                this.updateProjectContainer();
+            }
+
+            setControls() {
+                this.carouselControls.forEach(control => {
+                    cardControlsContainer.appendChild(document.createElement('button')).className = `card-controls-${control}`;
+                    document.querySelector(`.card-controls-${control}`).innerText = control;
+                })
+            }
+
+            useControls() {
+                const triggers = [...cardControlsContainer.childNodes];
+                triggers.forEach(control => {
+                    control.addEventListener('click', e => {
+                        this.setCurrentState(control);
+                    });
+                });
+            }
+
+        }
+
+        const exampleCarousel = new Carousel(cardContainer, projectCard, cardControls);
+
+        exampleCarousel.setControls();
+        exampleCarousel.useControls();
+
+
     $('#contact-form').submit(function (event) {
         event.preventDefault();
 

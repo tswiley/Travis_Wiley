@@ -557,6 +557,7 @@ footer a {
     .skills-section h3 {
         width: 100%;
         text-align: center;
+        margin-top: 40px;
         margin-bottom: 20px;
     }
     
@@ -570,20 +571,136 @@ footer a {
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        padding-top: 40px;
+        padding-bottom: 100px;
     }
-
-    .project-card {
-        max-height: 400px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        z-index: 1;
-    }
-
-    .project-card:nth-child(2) {
-        z-index: 2; /* Set a higher z-index for the middle card */
-    }
-
     
+    .project-card,
+    .other-cards {
+        max-height: 400px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        transition: all 0.3s; /* Add a transition for smooth effects */
+    }
+    
+    .project-card:hover,
+    .other-cards:hover {
+        transform: scale(1.1); /* Add a scale effect on hover */
+    }
+    
+    #project-card-1,
+    #project-card-3,
+    #other-cards-1,
+    #other-cards-3 {
+        transition: all 0.3s; /* Add a transition for smooth effects on cards 1 and 3 */
+    }
+
+    #project-card-1,
+    #other-cards-1 {
+        transform: translateX(70%);
+    }
+    
+    #project-card-2,
+    #other-cards-2 {
+        z-index: 2; 
+        transform: scale(1.2);
+    }
+
+    #project-card-3,
+    #other-cards-3 {
+        transform: translateX(-70%);
+    }
+
+    .card-controls {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0;
+        height: 100px;
+    }
+
+    .card-controls button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        font-size: 30px;
+        margin: 0 50px;
+        padding: 0 12px;
+        text-transform: capitalize;
+    }
+    
+    .card-controls-button:focus {
+        outline: none;
+    }
+
+    .card-controls-previous {
+        position: relative;
+    }
+
+    .card-controls-previous::before {
+        border: solid #000;
+        border-width: 0 5px 5px 0;
+        content: '';
+        display: inline-block;
+        height: 5px;
+        left: -30px;
+        padding: 10px;
+        position: absolute;
+        top: 25%;
+        transform: rotate(135deg) translateY(-50%);
+        transition: left 0.15s ease-in-out;
+        width: 5px;
+    }
+
+    .card-controls-previous:hover::before {
+        left: -40px;
+    }
+
+    .card-controls-next {
+        position: relative;
+    }
+
+    .card-controls-next::before {
+        border: solid #000;
+        border-width: 0 5px 5px 0;
+        content: '';
+        display: inline-block;
+        height: 5px;
+        padding: 10px;
+        position: absolute;
+        right: -30px;
+        top: 45;
+        transform: rotate(-45deg) translateY(-50%);
+        transition: right 0.15s ease-in-out;
+        width: 5px;
+    }
+
+    .card-controls-next:hover::before {
+        right: -40px;
+    }
+
+    .card-nav {
+        bottom: -15px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .card-nav li {
+        background-color: #ddd;
+        border-radius: 50%;
+        height: 10px;
+        margin: 0 16px;
+        width: 10px;
+    }
+
+    .card-nav li.project-card-selected,
+    .card-nav li.other-cards-selected {
+        background-color: #555;
+    }
+
     .contactMe {
         max-width: 600px;
         margin: 0 auto;
