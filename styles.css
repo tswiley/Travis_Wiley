@@ -571,134 +571,46 @@ footer a {
     }
 
     .project-container {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: space-evenly;
         align-items: flex-start;
         padding-top: 40px;
         padding-bottom: 100px;
     }
-    
+
     .project-card {
         max-height: 400px;
+        max-width: 500px;
         border: 2px solid #ddd;
         border-radius: 8px;
         transition: all 0.3s;
     }
-    
+
     .project-card:hover {
-        transform: scale(1.1); 
+        transform: scale(1.1);
     }
-    
-    #project-card-1 {
+
+    #project-card-1,
+    #project-card-2,
+    #project-card-3,
+    #project-card-4,
+    #project-card-5,
+    #project-card-6 {
+        flex: 1;
+    }
+
+    #project-card-1,
+    #project-card-2,
+    #project-card-3 {
         background-color: #193A6F;
     }
 
-    #project-card-3 {
+    #project-card-4,
+    #project-card-5,
+    #project-card-6 {
         background-color: #F98125;
-    }
-    #project-card-1,
-    #project-card-3 {
-        transition: all 0.3s;
-    }
-
-    #project-card-1 {
-        transform: translateX(70%);
-    }
-    
-    #project-card-2{
-        z-index: 2; 
-        /* transform: scale(1.2); */
-    }
-
-    #project-card-3{
-        transform: translateX(-70%);
-    }
-
-    .card-controls {
-        display: flex;
-        justify-content: center;
-        margin: 25px 0;
-        height: 100px;
-    }
-
-    .card-controls button {
-        background-color: transparent;
-        border: 0;
-        cursor: pointer;
-        font-size: 30px;
-        margin: 0 50px;
-        padding: 0 12px;
-        text-transform: capitalize;
-    }
-    
-    .card-controls-button:focus {
-        outline: none;
-    }
-
-    .card-controls-previous {
-        position: relative;
-    }
-
-    .card-controls-previous::before {
-        border: solid #000;
-        border-width: 0 5px 5px 0;
-        content: '';
-        display: inline-block;
-        height: 5px;
-        left: -30px;
-        padding: 10px;
-        position: absolute;
-        top: 25%;
-        transition: left 0.15s ease-in-out;
-        width: 5px;
-    }
-
-    .card-controls-previous:hover::before {
-        left: -40px;
-    }
-
-    .card-controls-next {
-        position: relative;
-    }
-
-    .card-controls-next::before {
-        border: solid #000;
-        border-width: 0 5px 5px 0;
-        content: '';
-        display: inline-block;
-        height: 5px;
-        padding: 10px;
-        position: absolute;
-        right: -30px;
-        top: 45;
-        transition: right 0.15s ease-in-out;
-        width: 5px;
-    }
-
-    .card-controls-next:hover::before {
-        right: -40px;
-    }
-
-    .card-nav {
-        bottom: -15px;
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        position: absolute;
-        width: 100%;
-    }
-
-    .card-nav li {
-        background-color: #ddd;
-        border-radius: 50%;
-        height: 10px;
-        margin: 0 16px;
-        width: 10px;
-    }
-
-    .card-nav li.project-card-selected {
-        background-color: #555;
     }
 
     .contactMe {
