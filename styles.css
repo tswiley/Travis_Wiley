@@ -351,6 +351,20 @@ header {
     margin-top: 15px;
 }
 
+#project-card-1,
+    #project-card-3,
+    #project-card-5 {
+        background-color: #193A6F;
+        color: #fff;
+    }
+
+    #project-card-2,
+    #project-card-4,
+    #project-card-6 {
+        background-color: #F98125;
+        color: #fff;
+    }
+
 .contactMe {
     background-color: #11224D;
     color: #fff;
@@ -416,10 +430,18 @@ button {
     margin-right: 5px; /* Adjust the spacing between radio buttons and labels */
 }
 
-.success-message {
-    color: #4CAF50; 
-    font-size: 16px;
-    margin-top: 10px;
+.submission-message {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 1000;
 }
 
 
@@ -482,6 +504,7 @@ footer a {
     #logo img {
         width: 100px;
         height: auto;
+        z-index: 2;
     }
 
     .nav {
@@ -497,19 +520,36 @@ footer a {
         justify-content: center;
         align-items: center;
         margin: 0;
-        padding: 15px 0;
     }
-    
+
     .nav li {
         margin-right: 10px;
     }
-    
+
     .nav a {
         text-decoration: none;
         color: #F98125;
         font-weight: bold;
-        font-size: 18px; 
+        font-size: 18px;
         padding: 25px;
+    }
+    
+    .resume {
+        position: absolute;
+        margin: 0 auto;
+        padding-top: 40px;
+        right: 20px; /* Adjust the right spacing */
+    }
+    
+    #resume a[href="Travis_Wiley_2023.pdf"] {
+        background-color: #193A6F;
+        color: #F98125;
+        padding: 10px 20px;
+        border: 3px solid #2C599D;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
     }
 
     .contact {
@@ -540,6 +580,10 @@ footer a {
         font-weight: bold;
     }
 
+    .purpose-row {
+        padding-bottom: 50px;
+    }
+
     .purpose-columns {
         max-width: 1100px;
         margin: 0 auto;
@@ -556,6 +600,10 @@ footer a {
         list-style: none;
         text-align: center;
     }
+
+    .skills-section {
+        padding-bottom: 50px;
+    }
     
     .skills-section h3 {
         width: 100%;
@@ -571,6 +619,8 @@ footer a {
     }
 
     .project-container {
+        max-width: 1280px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
@@ -588,6 +638,10 @@ footer a {
         transition: all 0.3s;
     }
 
+    .project-card a {
+        color: black;
+    }
+
     .project-card:hover {
         transform: scale(1.1);
     }
@@ -601,17 +655,7 @@ footer a {
         flex: 1;
     }
 
-    #project-card-1,
-    #project-card-2,
-    #project-card-3 {
-        background-color: #193A6F;
-    }
-
-    #project-card-4,
-    #project-card-5,
-    #project-card-6 {
-        background-color: #F98125;
-    }
+    
 
     .contactMe {
         max-width: 600px;
