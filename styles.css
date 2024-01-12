@@ -188,7 +188,6 @@ header {
 .about-me p,
 #purpose-row,
 .featured-projects,
-.other-projects,
 .contactMe {
     text-align: center;
 }
@@ -205,14 +204,12 @@ header {
 }
 
 .about-me h2,
-.featured-projects h2,
-.other-projects h2 {
+.featured-projects h2 {
     font-size: 50px;
     padding-top: 50px;
 }
 
-.featured-projects h2,
-.other-projects h2 {
+.featured-projects h2 {
     padding-bottom: 30px;
 }
 
@@ -311,8 +308,7 @@ header {
     margin-top: 120px;
 }
 
-.project-card,
-.other-cards {
+.project-card {
     margin: 0 auto;
     max-width: 300px;
     max-height: 400px;
@@ -331,8 +327,8 @@ header {
 .project-card h4 {
     
 }
-.featured-projects p,
-.other-projects p {
+
+.featured-projects p {
     font-size: 15px;
     padding-top: 30px;
 }
@@ -421,7 +417,7 @@ button {
 }
 
 .success-message {
-    color: #4CAF50; /* Green color */
+    color: #4CAF50; 
     font-size: 16px;
     margin-top: 10px;
 }
@@ -582,17 +578,15 @@ footer a {
         padding-bottom: 100px;
     }
     
-    .project-card,
-    .other-cards {
+    .project-card {
         max-height: 400px;
         border: 2px solid #ddd;
         border-radius: 8px;
-        transition: all 0.3s; /* Add a transition for smooth effects */
+        transition: all 0.3s;
     }
     
-    .project-card:hover,
-    .other-cards:hover {
-        transform: scale(1.1); /* Add a scale effect on hover */
+    .project-card:hover {
+        transform: scale(1.1); 
     }
     
     #project-card-1 {
@@ -603,25 +597,20 @@ footer a {
         background-color: #F98125;
     }
     #project-card-1,
-    #project-card-3,
-    #other-cards-1,
-    #other-cards-3 {
-        transition: all 0.3s; /* Add a transition for smooth effects on cards 1 and 3 */
+    #project-card-3 {
+        transition: all 0.3s;
     }
 
-    #project-card-1,
-    #other-cards-1 {
+    #project-card-1 {
         transform: translateX(70%);
     }
     
-    #project-card-2,
-    #other-cards-2 {
+    #project-card-2{
         z-index: 2; 
-        transform: scale(1.2);
+        /* transform: scale(1.2); */
     }
 
-    #project-card-3,
-    #other-cards-3 {
+    #project-card-3{
         transform: translateX(-70%);
     }
 
@@ -660,7 +649,6 @@ footer a {
         padding: 10px;
         position: absolute;
         top: 25%;
-        transform: rotate(135deg) translateY(-50%);
         transition: left 0.15s ease-in-out;
         width: 5px;
     }
@@ -683,7 +671,6 @@ footer a {
         position: absolute;
         right: -30px;
         top: 45;
-        transform: rotate(-45deg) translateY(-50%);
         transition: right 0.15s ease-in-out;
         width: 5px;
     }
@@ -710,8 +697,7 @@ footer a {
         width: 10px;
     }
 
-    .card-nav li.project-card-selected,
-    .card-nav li.other-cards-selected {
+    .card-nav li.project-card-selected {
         background-color: #555;
     }
 
