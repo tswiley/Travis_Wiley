@@ -37,60 +37,50 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
         });
 
-        $('#contact-form').submit(function (event) {
-            event.preventDefault();
-        
-            const nameInput = $('#name');
-            const phoneInput = $('#phone');
-            const emailInput = $('#email-contact');
-            const contactMethodInput = $("input[name='contact-method']:checked");
-            const commentsInput = $('#comments');
-            const nameError = $('#name-error');
-            const phoneError = $('#phone-error');
-            const emailError = $('#email-error');
-            const contactMethodError = $('#contact-method-error');
-            const commentsError = $('#comments-error');
-        
-            const isValidName = validateNotEmpty(nameInput.val());
-            const isValidPhone = validateNotEmpty(phoneInput.val());
-            const isValidEmail = validateEmail(emailInput.val());
-            const isValidContactMethod = contactMethodInput.length > 0;
-            const isValidComments = validateNotEmpty(commentsInput.val());
-        
-            displayErrorMessage(isValidName, nameError, 'Please enter your name.');
-            displayErrorMessage(isValidPhone, phoneError, 'Please enter your phone number.');
-            displayErrorMessage(isValidEmail, emailError, 'Please enter a valid email address.');
-            displayErrorMessage(isValidContactMethod, contactMethodError, 'Please select a contact method.');
-            displayErrorMessage(isValidComments, commentsError, 'Please enter your comments.');
-        
-            if (isValidName && isValidPhone && isValidEmail && isValidContactMethod && isValidComments) {
-                // Prepare form data
-                const formData = {
-                    name: nameInput.val(),
-                    phone: phoneInput.val(),
-                    email: emailInput.val(),
-                    contactMethod: contactMethodInput.val(),
-                    comments: commentsInput.val(),
-                };
-        
-                // Use AJAX to submit the form
-                $.ajax({
-                    type: 'POST',
-                    url: 'submit.php', // Replace with your server-side script URL
-                    data: formData,
-                    success: function (response) {
-                        // Show the submission message
-                        $('#submission-message').fadeIn();
-                        
-                        // Show a pop-up message
-                        alert('Thank you for contacting us. We will reach out to you soon.');
-                    },
-                    error: function (error) {
-                        console.error('Form submission error:', error);
-                    }
-                });
-            }
-        });
+        const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Validate the form
+        const isValid = validateForm();
+
+        if (isValid) {
+            // Display success message
+            displaySuccessMessage();
+            // You can also send the form data to a server using AJAX if needed
+            // Example: sendFormData();
+        }
+    });
+
+    function validateForm() {
+        // You can add your custom validation logic here
+        // For simplicity, this example just checks if the contact method is selected
+        const contactMethod = document.querySelector('input[name="contact-method"]:checked');
+        const contactMethodError = document.getElementById('contact-method-error');
+
+        if (!contactMethod) {
+            contactMethodError.textContent = 'Please select a contact method';
+            return false;
+        }
+
+        // Clear any previous error messages
+        contactMethodError.textContent = '';
+        return true;
+    }
+
+    function displaySuccessMessage() {
+        const formContainer = document.getElementById('contactMe');
+        const successMessage = document.createElement('div');
+        successMessage.textContent = 'Thank you for contacting Red Leg Brewing Company. We will be in touch with you soon!';
+        successMessage.classList.add('success-message');
+    
+        // Clear the form
+        contactForm.reset();
+    
+        // Append the success message under the form
+        formContainer.appendChild(successMessage);
+    }
 
     var backToTopButton = document.getElementById('back-to-top');
 

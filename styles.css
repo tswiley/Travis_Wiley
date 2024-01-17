@@ -311,7 +311,7 @@ header {
 .project-card {
     margin: 0 auto;
     max-width: 300px;
-    height: 400px;
+    height: 450px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -319,9 +319,9 @@ header {
 }
 
 .project-card img {
-    max-width: 100%;
+    max-width: 300px;
     max-height: 200px;
-    height: auto;
+    padding-bottom: 5px;
 }
 
 .featured-projects p {
@@ -329,22 +329,27 @@ header {
     padding-top: 30px;
 }
 
-.project-description {
-    
+.project-tech-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
 }
 
 .project-tech-list {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly; 
 }
 
-.project-tech-list li {
-    margin-bottom: 5px;
+.project-tech-list li img {
+    height: 50px;
+    width: 50px;
 }
 
 .project-links {
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 #project-card-1,
@@ -428,7 +433,6 @@ button {
 
 .submission-message {
     display: none;
-    background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 10px;
@@ -627,7 +631,7 @@ footer a {
     }
 
     .project-card {
-        max-height: 500px;
+        max-height: 600px;
         max-width: 500px;
         border: 2px solid #ddd;
         border-radius: 8px;
@@ -636,8 +640,7 @@ footer a {
 
     .project-card img {
         max-width: 100%;
-        max-height: 400px;
-        height: auto;
+        height: 300px;
     }
 
     .project-card a {
@@ -657,7 +660,9 @@ footer a {
         flex: 1;
     }
 
-    
+    .project-links {
+        padding-bottom: 15px;
+    }
 
     .contactMe {
         max-width: 600px;
