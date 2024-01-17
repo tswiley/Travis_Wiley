@@ -140,7 +140,7 @@ header {
 }
 
 .menu-toggle.open #toggle-label {
-    opacity: 0; /* Hide the label when the menu is open */
+    opacity: 0; 
 }
 
 .menu-toggle.open .bar:nth-child(1) {
@@ -424,11 +424,11 @@ button {
 }
 
 .contact-methods .form-group {
-    margin-right: 20px; /* Adjust the spacing between radio buttons and labels */
+    margin-right: 20px; 
 }
 
 .contact-methods input[type="radio"] {
-    margin-right: 5px; /* Adjust the spacing between radio buttons and labels */
+    margin-right: 5px; 
 }
 
 .submission-message {
@@ -494,9 +494,6 @@ footer a {
     padding: 25px;
 }
 
-
-
-
 /* Desktop and Tablet Design */
 @media screen and (min-width: 1045px) {
     .menu-toggle {
@@ -505,15 +502,13 @@ footer a {
 
     .header {
         display: grid;
-        grid-template-columns: auto 1fr auto; 
+        grid-template-columns: auto 1fr auto;
         align-items: center;
         padding: 10px;
     }
-    
-    #logo img {
-        width: 100px;
-        height: auto;
-        z-index: 2;
+
+    .top-bar {
+        justify-content: center; 
     }
 
     .nav {
@@ -528,7 +523,7 @@ footer a {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        padding-right: 100px;
     }
 
     .nav li {
@@ -542,12 +537,11 @@ footer a {
         font-size: 18px;
         padding: 25px;
     }
-    
+
     .resume {
-        position: absolute;
+        position: static;
         margin: 0 auto;
         padding-top: 40px;
-        right: 20px; /* Adjust the right spacing */
     }
     
     #resume a[href="Travis_Wiley_2023.pdf"] {
@@ -596,15 +590,15 @@ footer a {
     .purpose-columns {
         max-width: 1100px;
         margin: 0 auto;
-        display: flex; /* Change display to flex */
-        justify-content: space-evenly; /* Add this line to evenly space columns horizontally */
+        display: flex; 
+        justify-content: space-evenly; 
     }
 
     .skills {
         max-width: 1100px;
         margin: 0 auto;
-        display: flex; /* Add this line */
-        justify-content: space-evenly; /* Add this line to evenly space skills horizontally */
+        display: flex; 
+        justify-content: space-evenly; 
         padding: 0;
         list-style: none;
         text-align: center;
