@@ -50,7 +50,7 @@ table {
 body {
     background-color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #828282;
+    color: #3A3B3C;
     line-height: 1;
 }
 
@@ -324,6 +324,11 @@ header {
     padding-bottom: 5px;
 }
 
+.project-card a {
+    text-decoration: none;
+    color: red;
+}
+
 .featured-projects p {
     font-size: 15px;
     padding-top: 30px;
@@ -373,10 +378,11 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 40px;
+    border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contactMe form {
@@ -385,42 +391,66 @@ header {
 }
 
 .contactMe h2 {
-    font-size: 20px;
-    padding-bottom: 10px;
-    color: #F98125;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #E74C3C;
 }
 
 .form-group {
-    padding: 10px;
+    margin-bottom: 20px;
 }
 
-.comment-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px; 
+.contact-methods label {
+    padding-bottom: 100px;
 }
 
-label {
-    order: -1; 
-    padding-bottom: 5px;
+.comment-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ECF0F1;
 }
 
 textarea {
     margin-top: 10px;
     width: 100%;
+    padding: 15px;
+    border: 2px solid #E74C3C;
+    border-radius: 8px;
+    resize: vertical;
 }
 
 input,
 textarea,
 button {
     width: 100%;
+    padding: 15px;
     box-sizing: border-box;
+    border: 2px solid #F98125;
+    border-radius: 8px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #E74C3C;
+}
+
+button {
+    background-color: #F98125;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980B9;
 }
 
 .contact-methods {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
 }
 
 .contact-methods .form-group {
@@ -428,7 +458,7 @@ button {
 }
 
 .contact-methods input[type="radio"] {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .submission-message {
@@ -443,7 +473,6 @@ button {
     width: 80%;
     z-index: 1000;
 }
-
 
 #back-to-top {
     position: fixed;
@@ -644,10 +673,6 @@ footer a {
     .project-card img {
         max-width: 100%;
         height: 300px;
-    }
-
-    .project-card a {
-        color: black;
     }
 
     .project-card:hover {
