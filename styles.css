@@ -311,7 +311,7 @@ header {
 .project-card {
     margin: 0 auto;
     max-width: 300px;
-    max-height: 400px;
+    height: 400px;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -320,13 +320,8 @@ header {
 
 .project-card img {
     max-width: 100%;
-    max-height: 200px;
+    height: 200px;
     height: auto;
-}
-
-.project-card h3,
-.project-card h4 {
-    
 }
 
 .featured-projects p {
@@ -355,16 +350,16 @@ header {
 #project-card-1,
     #project-card-3,
     #project-card-5 {
-        background-color: #193A6F;
-        color: #fff;
-    }
+    background-color: #193A6F;
+    color: #fff;
+}
 
-    #project-card-2,
-    #project-card-4,
-    #project-card-6 {
-        background-color: #F98125;
-        color: #fff;
-    }
+#project-card-2,
+#project-card-4,
+#project-card-6 {
+    background-color: #F98125;
+    color: #fff;
+}
 
 .contactMe {
     background-color: #11224D;
@@ -632,7 +627,7 @@ footer a {
     }
 
     .project-card {
-        max-height: 400px;
+        max-height: 500px;
         max-width: 500px;
         border: 2px solid #ddd;
         border-radius: 8px;
