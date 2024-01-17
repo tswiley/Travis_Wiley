@@ -469,7 +469,6 @@ button {
     opacity: 0.8;
 }
 
-
 footer {
     background-color: #11224D;
     color: #fff;
@@ -477,16 +476,26 @@ footer {
     text-align: center;
 }
 
-footer p {
-    padding-top: 20px;
-    margin-bottom: 10px;
+footer ul {
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+footer li {
+    margin-right: 10px;
 }
 
 footer a {
-    padding-top: 20px;
-    color: #F98125;
     text-decoration: none;
+    color: #F98125;
+    font-size: 18px;
+    padding: 25px;
 }
+
+
+
 
 /* Desktop and Tablet Design */
 @media screen and (min-width: 1045px) {
