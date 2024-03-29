@@ -5,6 +5,7 @@ function validateNotEmpty(value) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Load header and footer
     fetch("header.html")
         .then(response => response.text())
         .then(headerData => {
@@ -24,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     const nav = document.querySelector('.nav');
                     const closeButton = document.querySelector('.close-button');
 
-
                     menuToggle.addEventListener('click', function () {
                         nav.classList.toggle('open');
                         menuToggle.classList.toggle('open');
@@ -37,24 +37,41 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
         });
 
-        const contactForm = document.getElementById('contact-form');
+    // Form submission handling
+    const contactForm = document.getElementById('contact-form');
 
     contactForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
 
-        // Validate the form
         const isValid = validateForm();
 
         if (isValid) {
-            // Display success message
-            displaySuccessMessage();
-            // You can also send the form data to a server using AJAX if needed
-            // Example: sendFormData();
+            // Use the Fetch API to send the form data to the server
+            fetch('/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: document.getElementById('name').value,
+                    phone: document.getElementById('phone').value,
+                    email: document.getElementById('email-contact').value,
+                    // Add other form fields as needed
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                displaySuccessMessage();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
         }
     });
 
     function validateForm() {
-        // You can add your custom validation logic here
+        // Add your custom validation logic here
         // For simplicity, this example just checks if the contact method is selected
         const contactMethod = document.querySelector('input[name="contact-method"]:checked');
         const contactMethodError = document.getElementById('contact-method-error');
@@ -72,16 +89,17 @@ document.addEventListener("DOMContentLoaded", function () {
     function displaySuccessMessage() {
         const formContainer = document.getElementById('contactMe');
         const successMessage = document.createElement('div');
-        successMessage.textContent = 'Thank you for contacting Red Leg Brewing Company. We will be in touch with you soon!';
+        successMessage.textContent = 'Thank you for contacting us. We will be in touch with you soon!';
         successMessage.classList.add('success-message');
-    
+
         // Clear the form
         contactForm.reset();
-    
+
         // Append the success message under the form
         formContainer.appendChild(successMessage);
     }
 
+    // Back to top button
     var backToTopButton = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', function () {

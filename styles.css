@@ -48,9 +48,9 @@ table {
 
 /* Global Styles */
 body {
-    background-color: #fff;
+    background-color: #000248;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #3A3B3C;
+    color: #fff;
     line-height: 1;
 }
 
@@ -60,7 +60,7 @@ main {
 
 /* Mobile Design */
 header {
-    background-color: #11224D;
+    background-color: #000248;
     padding: 20px;
 }
 
@@ -71,8 +71,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #11224D;
-    color: #FB9850;
+    background-color: #000248;
+    color: #fff;
     position: relative;
 }
 
@@ -95,13 +95,13 @@ header {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #F98125;
+    background-color: #fff;
     margin: 5px 0;
     transition: 0.5s opacity var(--animation-curve), 0.5s transform var(--animation-curve);
 }
 
 .logo img {
-    width: 100px;
+    max-width: 200px;
     height: auto;
     order: -1; 
 }
@@ -125,7 +125,7 @@ header {
 
 .nav a {
     text-decoration: none;
-    color: #F98125;
+    color: #fff;
     font-weight: bold;
     padding: 15px;
     display: block;
@@ -162,20 +162,18 @@ header {
 }
 
 #resume a[href="Travis_Wiley_2024.pdf"] {
-    background-color: #193A6F;
-    color: #F98125;
+    background-color: #016987;
+    color: #fff;
     padding: 10px 20px;
-    border: 3px solid #2C599D;
+    border: 3px solid #016987;
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
 }
 
-#bio-image {
-    max-height: 300px;
-    border-radius: 50%;
-    border: 5px solid #F98125;
+#phone-image {
+    max-width: 100%;
     margin: 0 auto;
     display: block;
     margin-top: 120px;
@@ -312,7 +310,7 @@ header {
     margin: 0 auto;
     max-height: 500px;
     max-width: 300px;
-    border: 1px solid #ddd;
+    border: 1px solid #0283FF;
     border-radius: 8px;
     margin-bottom: 20px;
     padding: 20px;
@@ -368,19 +366,19 @@ header {
 #project-card-1,
     #project-card-3,
     #project-card-5 {
-    background-color: #193A6F;
+    background-color: #00007B;
     color: #fff;
 }
 
 #project-card-2,
 #project-card-4,
 #project-card-6 {
-    background-color: #F98125;
+    background-color: #00007B;
     color: #fff;
 }
 
 .contactMe {
-    background-color: #11224D;
+    background-color: #00007B;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -401,7 +399,7 @@ header {
 .contactMe h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #F98125;
+    color: #fff;
 }
 
 .form-group {
@@ -433,7 +431,7 @@ button {
     width: 100%;
     padding: 15px;
     box-sizing: border-box;
-    border: 2px solid #F98125;
+    border: 2px solid #0283FF;
     border-radius: 8px;
 }
 
@@ -444,14 +442,14 @@ textarea:focus {
 }
 
 button {
-    background-color: #F98125;
+    background-color: #016987;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #2980B9;
+    background-color: #0283FF;
 }
 
 .contact-methods {
@@ -486,7 +484,7 @@ button:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #F98125;
+    background-color: #016987;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -502,12 +500,12 @@ button:hover {
 }
 
 #back-to-top:hover {
-    background-color: #F98125;
+    background-color: #016987;
     opacity: 0.8;
 }
 
 footer {
-    background-color: #11224D;
+    background-color: #00007B;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -526,9 +524,14 @@ footer li {
 
 footer a {
     text-decoration: none;
-    color: #F98125;
+    color: #fff;
     font-size: 18px;
     padding: 25px;
+}
+
+.footer-logo img {
+    max-width: 300px;
+    height: auto;
 }
 
 /* Desktop and Tablet Design */
@@ -569,7 +572,7 @@ footer a {
 
     .nav a {
         text-decoration: none;
-        color: #F98125;
+        color: #fff;
         font-weight: bold;
         font-size: 18px;
         padding: 25px;
@@ -581,16 +584,7 @@ footer a {
         padding-top: 40px;
     }
     
-    #resume a[href="Travis_Wiley_2023.pdf"] {
-        background-color: #193A6F;
-        color: #F98125;
-        padding: 10px 20px;
-        border: 3px solid #2C599D;
-        border-radius: 10px;
-        cursor: pointer;
-        text-decoration: none;
-        font-weight: bold;
-    }
+    
 
     .contact {
         display: grid;
@@ -611,9 +605,9 @@ footer a {
     }
 
     #resume a[href="Travis_Wiley_2023.pdf"] {
-        background-color: #193A6F;
-        color: #F98125;
-        border: 3px solid #2C599D;
+        background-color: #0028E5;
+        color: #fff;
+        border: 3px solid #0028E5;
         border-radius: 10px;
         cursor: pointer;
         text-decoration: none;
@@ -673,7 +667,7 @@ footer a {
     .project-card {
         max-height: 600px;
         max-width: 500px;
-        border: 2px solid #ddd;
+        border: 2px solid #0283FF;
         border-radius: 8px;
         transition: all 0.3s;
     }
