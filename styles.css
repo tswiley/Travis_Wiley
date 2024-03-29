@@ -172,6 +172,16 @@ header {
     font-weight: bold;
 }
 
+#bio-image {
+    max-height: 300px;
+    border-radius: 50%;
+    border: 5px solid #016987;
+    margin: 0 auto;
+    display: block;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
 #phone-image {
     max-width: 100%;
     margin: 0 auto;
